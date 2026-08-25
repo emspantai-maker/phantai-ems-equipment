@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="emsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B2545" />
+      <stop offset="100%" stop-color="#134074" />
+    </linearGradient>
+    <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A6FB" />
+      <stop offset="100%" stop-color="#006494" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer Shield -->
+  <rect width="512" height="512" rx="100" fill="url(#emsGrad)"/>
+  
+  <!-- Outer Ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#FFFFFF" stroke-width="6" opacity="0.4"/>
+  <circle cx="256" cy="256" r="195" fill="none" stroke="#00A6FB" stroke-width="4" opacity="0.6"/>
+
+  <!-- Star of Life (EMS 6-pointed Star) -->
+  <g filter="url(#shadow)" fill="#FFFFFF">
+    <!-- Star of Life Arms -->
+    <!-- Vertical Bar -->
+    <path d="M226 80 h60 v352 h-60 z" rx="12" fill="#00A6FB"/>
+    <!-- Diagonal Bar 1 (60 deg) -->
+    <g transform="rotate(60 256 256)">
+      <path d="M226 80 h60 v352 h-60 z" rx="12" fill="#00A6FB"/>
+    </g>
+    <!-- Diagonal Bar 2 (-60 deg) -->
+    <g transform="rotate(-60 256 256)">
+      <path d="M226 80 h60 v352 h-60 z" rx="12" fill="#00A6FB"/>
+    </g>
+    
+    <!-- Inner White Cross Overlay -->
+    <path d="M236 95 h40 v322 h-40 z" rx="8" fill="#FFFFFF"/>
+    <g transform="rotate(60 256 256)">
+      <path d="M236 95 h40 v322 h-40 z" rx="8" fill="#FFFFFF"/>
+    </g>
+    <g transform="rotate(-60 256 256)">
+      <path d="M236 95 h40 v322 h-40 z" rx="8" fill="#FFFFFF"/>
+    </g>
+  </g>
+
+  <!-- Rod of Asclepius (Staff and Snake) Center Motif in Red/Gold -->
+  <g transform="translate(256, 256) scale(0.95) translate(-256, -256)">
+    <!-- Staff (Center Rod) -->
+    <path d="M251 140 h10 v232 h-10 z" fill="#DC2626" rx="4"/>
+    <circle cx="256" cy="135" r="8" fill="#DC2626"/>
+    
+    <!-- Snake Coiling Staff -->
+    <path d="M 235 340 C 245 345, 270 345, 275 320 C 275 295, 240 290, 240 270 C 240 250, 275 245, 275 225 C 275 205, 240 200, 240 180 C 240 160, 265 155, 270 145" 
+          fill="none" stroke="#DC2626" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Text / Badge Decoration -->
+  <text x="256" y="450" font-family="'Prompt', sans-serif" font-size="26" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">กู้ชีพพันท้ายนรสิงห์</text>
+  <text x="256" y="475" font-family="'Prompt', sans-serif" font-size="14" font-weight="500" fill="#93C5FD" text-anchor="middle" letter-spacing="2">PHANTAI EMS</text>
+</svg>
